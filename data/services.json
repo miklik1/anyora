@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Komplexní konzultace",
+    "handle": "komplexni-konzultace",
+    "desc": "60 minut dlouhý individuální rozhovor",
+    "bg": "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "detail": {
+      "name": "Komplexní konzultace",
+      "intro": [
+        "Projdeme si kompletní nutriční anamnézu a zhodnotíme vaše stravovací návyky.",
+        "Odkryjeme váš vztah k jídlu a dostanete výstup k našeho sezení, kde najdete výživová doporučení a zhodnocení nutričního stavu."
+      ],
+      "content": [
+        "Analýzu stravovacích návyků",
+        "Zhodnocení nutričního stavu a doporučení případných změn ve stravování",
+        "Nasměrování ke zdravé výživě",
+        "Odpovědi na vaše specifické otázky"
+      ],
+      "target_audience": [
+        "Nevím, jak ve světě protichůdných informací vybrat ty, které budou fungovat mně.",
+        "Potřebuju nutriční radu na situaci, kterou teď řeším.",
+        "Nevím, co znamená jíst plnohodnotně a správně.",
+        "Mám alergii/intoleranci a nejsem si jistá/ý, co mi (ne)dělá dobře.",
+        "Potřebuju nasměrovat na správnou cestu.",
+        "Jím dobře, ale často se cítím unavená/ý a mám problémy se zažíváním."
+      ],
+      "price": "499",
+      "package_bullets": ["Analýza nutričního stavu"]
+    }
+  },
+  {
+    "name": "Výživový plán",
+    "handle": "vyzivovy-plan",
+    "desc": "Jednorázová forma spolupráce",
+    "bg": "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "detail": {
+      "name": "Výživový plán",
+      "intro": [
+        "Nejprve se domluvíme na online schůzce, kde si projdeme kompletní nutriční anamnézu a zhodnotíme vaše stravovací návyky.",
+        "Odkryjeme váš vztah k jídlu a doplníme údaje z vašeho vstupního formuláře. Následně dostanete výstup k našeho sezení, kde najdete výživová doporučení a výživový plán na míru.",
+        "Domluvíme se, jak by plán měl vypadat a cca za 14 dnů můžete očekávat svůj plán na emailu.",
+        "Výživový plán obsahuje cca 50 stran."
+      ],
+      "content": [
+        "Analýzu stravovacích návyků",
+        "Zhodnocení nutričního stavu a doporučení případných změn ve stravování",
+        "Nasměrování ke zdravé výživě",
+        "Výživový plán přizpůsobený vašim návykům",
+        "Vzorový jídelníček",
+        "Recepty s propočtem nutričních hodnot"
+      ],
+      "target_audience": [
+        "Potřebuji do svého stravování vnést větší pořádek a systém.",
+        "Nechci trávit v kuchyni hodiny, abych mohl/a jíst zdravě.",
+        "Nevím, co znamená jíst plnohodnotně a správně.",
+        "Mám alergii/intoleranci a chci mít více inspirace k přípravě jídel.",
+        "Potřebuju nasměrovat na správnou cestu.",
+        "Nevím, jak si poskládat jídlo tak, abych neměla za chvíli zase hlad."
+      ],
+      "price": "1 499",
+      "package_bullets": [
+        "Analýza nutričního stavu",
+        "Výživový plán na míru",
+        "Vzorový jídelníček"
+      ]
+    }
+  },
+  {
+    "name": "Online koučink",
+    "handle": "online-koucink",
+    "desc": "Dlouhodobá forma spolupráce",
+    "bg": "https://images.pexels.com/photos/533446/pexels-photo-533446.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "detail": {
+      "name": "Online koučink",
+      "intro": [
+        "Na vstupní schůzce spolu probereme všechno, co potřebuji znát k sestavení výživového plánu na míru.",
+        "Komplexní analýzu nutriční anamnézy pak vyhodnotím a na jejím základě navrhnu výživový plán, který postupem času upravujeme tak, abychom z něj vytěžili maximum.",
+        "Budete jíst to, co máte rádi. Přizpůsobíme jídelníček vám a ne vás jídelníčku.",
+        "Nejsem zastáncem striktních jídelníčků, kde každý den máte pevně napsáno, co si dát k obědu a co k večeři. Naučíme se jídla skládat tak, ať si můžete dát kdykoliv to, na co máte chuť.",
+        "Jako inspiraci do začátku dostanete jídelníček uzpůsobený vašemu režimu sestavený z jídel, které máte rádi.",
+        "Budeme se pravidelně každý měsíc potkávat na konzultacích, kde do hloubky probereme jak se nám daří/nedaří a upravíme plán podle aktuálních potřeb.",
+        "Po dobu koučinku jsem vám kdykoli k dispozici a můžete se mě ptát na cokoli vás napadne."
+      ],
+      "content": [
+        "Analýzu stravovacích návyků",
+        "Zhodnocení nutričního stavu a doporučení případných změn ve stravování",
+        "Nasměrování ke zdravé výživě",
+        "Odpovědi na vaše specifické otázky",
+        "E-book receptů s propočty"
+      ],
+      "target_audience": [
+        "Nevím, jak ve světě protichůdných informací vybrat ty, které budou fungovat mně.",
+        "Vztah k jídlu je pro mě jedno velké téma.",
+        "Nevím, co znamená jíst plnohodnotně a správně.",
+        "Mám alergii/intoleranci a nejsem si jistá/ý, co mi (ne)dělá dobře.",
+        "Potřebuju nasměrovat na správnou cestu.",
+        "Jím dobře, ale často se cítím unavená/ý a mám problémy se zažíváním.",
+        "Chci dozor odborníka."
+      ],
+      "price": "3 499",
+      "package_bullets": [
+        "Analýza nutričního stavu",
+        "Výživový plán na míru",
+        "Vzorový jídelníček",
+        "E-book receptů",
+        "5 online sezení"
+      ]
+    }
+  }
+]
