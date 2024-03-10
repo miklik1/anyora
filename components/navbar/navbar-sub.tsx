@@ -14,7 +14,7 @@ const NavbarSub = () => {
   const [active, setActive] = useState("Domů");
 
   return (
-    <div className="sticky top-20 z-50 flex justify-center py-2">
+    <div className="sticky top-20 z-50 flex justify-start lg:justify-center px-3 lg:py-2">
       <div className="flex max-w-xs rounded-full glass py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-4xl">
         <div className="navbar-start">
           <div className="dropdown">

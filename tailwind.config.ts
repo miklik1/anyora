@@ -14,24 +14,28 @@ const config: Config = {
     },
   },
   daisyui: {
+    // #162114
+    // #294122
+    // #ffbba6
+    // #eb3d00
     themes: [
       {
         mytheme: {
-          primary: "#3a2d28",
+          primary: "#162114",
 
-          secondary: "#a48374",
+          secondary: "#294122",
 
-          accent: "#f1ede6",
+          accent: "#162114",
 
-          neutral: "#a48374",
+          neutral: "#162114",
 
-          "base-100": "#bfc8a2",
+          "base-100": "#e09132",
 
           "background-color": "#e6f1ed",
 
-          info: "#5abaff",
+          info: "#ffbba6",
 
-          success: "#00e374",
+          success: "#162114",
 
           warning: "#ffa700",
 

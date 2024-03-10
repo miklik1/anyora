@@ -1,17 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
-  { name: "Domů", href: "#domu" },
-  { name: "Služby", href: "#sluzby" },
-  { name: "Reference", href: "#reference" },
-  { name: "O Mně", href: "#omne" },
-  { name: "Kontakty", href: "#kontakty" },
+  { name: "Domů", href: "domu" },
+  { name: "Služby", href: "sluzby" },
+  { name: "Reference", href: "reference" },
+  { name: "O Mně", href: "omne" },
+  { name: "Kontakt", href: "kontakt" },
 ];
 const NavbarSubMini = () => {
+  const pathname = usePathname();
   const [active, setActive] = useState("Domů");
+
+  useEffect(() => {
+    const activeNavItem = navigation.find((item) =>
+      pathname.includes(item.href)
+    );
+    setActive(activeNavItem ? activeNavItem.name : "Domů");
+  }, [pathname]);
 
   return (
     <div className="fixed top-8 left-0 right-0 mx-auto z-50 flex justify-center py-4">
@@ -58,7 +67,7 @@ const NavbarSubMini = () => {
             <nav key={index} className="menu menu-horizontal px-1">
               <a
                 key={item.name}
-                href={`/poradenstvi/${item.href}`}
+                href={`/poradenstvi/#${item.href}`}
                 className={`rounded-full  mx-2 text-sm font-light px-2 ${
                   active === item.name ? "bg-base-100" : ""
                 }`}

@@ -42,21 +42,21 @@ export default function About() {
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.1 }}
       id="omne"
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center mt-10 lg:mt-20"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-2xl font-semibold md:text-5xl">
+        <h1 className="text-center text-3xl font-semibold md:text-5xl">
           O mně
         </h1>
       </motion.div>
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
-        className="container mx-auto px-6 py-10 lg:-mx-6 lg:flex lg:items-center"
+        className="container mx-auto px-6 py-8 lg:-mx-6 lg:flex lg:items-center"
       >
         <div className="lg:mx-0 lg:mt-0 lg:flex lg:w-1/2 lg:flex-col lg:items-center">
           <span className="text-lg font-bold md:text-xl">KDO JSEM</span>
@@ -104,17 +104,17 @@ export default function About() {
         className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3"
       >
         {values.map((item, index) => (
-          <div key={index} className="card w-80 bg-base-100 shadow-sm lg:w-96">
-            <figure className="lpx-10 pt-10">
+          <div key={index} className="card w-80 bg-secondary text-slate-100 shadow lg:w-96">
+            <figure className="px-4 pt-4">
               <Image
                 src="icons/empathy.svg"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="Shoes"
-                className="h-44 w-44 rounded-full"
+                className="h-32 w-32"
               />
             </figure>
-            <div className="card-body items-center text-center">
+            <div className="card-body items-center text-center pt-0 p-4">
               <h2 className="card-title ">{item.name}</h2>
               <p className="">{item.description}</p>
             </div>

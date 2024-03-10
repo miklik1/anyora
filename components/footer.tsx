@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
+    <footer className="footer p-10 bg-secondary text-white">
       <nav>
         <h6 className="footer-title">Služby</h6>
         <Link
@@ -36,9 +36,9 @@ const Footer = () => {
       </nav>
       <nav>
         <h6 className="footer-title">Sociální sítě</h6>
-        <div className="-mx-1.5 flex ">
+        <div className="-mx-1.5 flex text-black">
           <Link
-            className="rounded-full bg-base-100 p-1"
+            className="rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:text-white"
             href="https://www.twitter.com"
             aria-label="twitter"
           >
@@ -53,7 +53,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="mx-1.5 rounded-full bg-base-100 p-1"
+            className="mx-1.5 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:text-white"
             href="https://www.facebook.com"
             aria-label="facebook"
           >
@@ -71,7 +71,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="mx-1.5 rounded-full bg-base-100 p-1"
+            className="mx-1.5 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:text-white"
             href="https://www.instagram.com"
             aria-label="instagram"
           >
@@ -89,7 +89,7 @@ const Footer = () => {
           </Link>
         </div>
       </nav>
-      <form>
+      {/* <form>
         <h6 className="footer-title">Newsletter</h6>
         <fieldset className="form-control w-80">
           <label className="label">
@@ -104,7 +104,7 @@ const Footer = () => {
             <button className="btn btn-primary join-item">Subscribe</button>
           </div>
         </fieldset>
-      </form>
+      </form> */}
     </footer>
   );
 };

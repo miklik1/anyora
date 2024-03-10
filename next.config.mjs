@@ -7,6 +7,11 @@ const nextConfig = {
         destination: "/poradenstvi",
         permanent: true,
       },
+      {
+        source: "/poradenstvi/sluzby",
+        destination: "/poradenstvi/sluzby/komplexni-konzultace",
+        permanent: true,
+      },
     ];
   },
   images: {
@@ -14,6 +19,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "daisyui.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
     ],
   },

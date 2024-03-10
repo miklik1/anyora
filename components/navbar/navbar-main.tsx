@@ -8,10 +8,11 @@ const NavBarMain = () => {
   const pathname = usePathname();
   return (
     <div className="sticky top-0 z-50 shadow-lg">
-      <div className="navbar bg-white">
+      <div className="navbar bg-white flex justify-center">
+        <div className="container flex justify-between">
         <div className="flex-1">
           <Link href="/" className="btn btn-ghost text-xl">
-            Nutricare Academy
+            Anyora
           </Link>
         </div>
         <div className="flex-none">
@@ -25,6 +26,8 @@ const NavBarMain = () => {
               </Link>
             </li>
           </ul>
+
+        </div>
         </div>
       </div>
     </div>

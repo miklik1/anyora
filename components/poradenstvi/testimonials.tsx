@@ -12,6 +12,7 @@ import {
   Mousewheel,
   Keyboard,
 } from "swiper/modules";
+import Image from "next/image";
 const testimonials = [
   {
     name: "Nikola",
@@ -38,13 +39,13 @@ const Testimonial = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="reference"
-      className="my-20 flex flex-col items-center justify-center md:my-32"
+      className="my-10 flex flex-col items-center justify-center md:my-32"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center  text-2xl font-semibold md:text-5xl">
+        <h1 className="text-center text-3xl font-semibold md:text-5xl">
           Reference
         </h1>
         <span className="text-md mt-2 px-2  md:mt-4 md:px-5 md:text-xl">
@@ -52,7 +53,7 @@ const Testimonial = () => {
         </span>
       </motion.div>
 
-      <motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="py-10">
+      <motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="px-10 py-10">
         <Swiper
           cssMode={true}
           navigation={true}
@@ -67,14 +68,16 @@ const Testimonial = () => {
           className="container mx-4 h-96 rounded-xl max-sm:max-w-sm"
         >
           {testimonials.map((item, index) => (
-            <SwiperSlide className="h-full bg-base-100" key={index}>
+            <SwiperSlide className="h-full bg-secondary/50" key={index}>
               <div className="flex h-full items-center justify-center">
                 <figure className="mx-10 mt-10">
-                  <blockquote className="text-center  font-semibold leading-8 text-base-content lg:text-2xl">
+                  <blockquote className="text-center  font-semibold leading-5 text-base-content lg:text-2xl">
                     <p>“{item.quote}”</p>
                   </blockquote>
                   <div className="mt-10 flex flex-col items-center">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="mx-auto h-14 w-14 rounded-full"
                       src={item.image}
                       alt={item.name}

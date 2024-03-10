@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import services from "@/data/services.json";
@@ -20,7 +21,7 @@ const Services = () => {
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-2xl font-semibold md:text-5xl">
+        <h1 className="text-center text-3xl font-semibold md:text-5xl">
           Moje služby
         </h1>
         <span className="text-md mt-2 px-2 text-center  md:mt-4 md:px-5 md:text-xl">
@@ -30,15 +31,21 @@ const Services = () => {
       </motion.div>
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
-        className="container mt-10 grid gap-10 p-4 md:grid-cols-2 xl:grid-cols-3"
+        className="container mt-10 grid gap-4 p-4 lg:grid-cols-3 xl:grid-cols-3"
       >
         {services.map((item, index) => (
           <Link href={`poradenstvi/sluzby/${item.handle}`} key={index}>
-            <div className="card image-full shadow-xl transition duration-300 hover:-translate-y-1 cursor-pointer">
+            <div className="card image-full shadow-xl transition duration-300 h-36 lg:h-full hover:-translate-y-1 cursor-pointer">
               <figure className="object-cover">
-                <img src={`/services/${item.handle}.jpg`} alt={item.name} />
+                <Image
+                  width={1152}
+                  height={768}
+                  src={`/services/${item.handle}.jpg`}
+                  alt={item.name}
+                  priority
+                />
               </figure>
-              <div className="card-body">
+              <div className="card-body p-4 lg:p-8">
                 <div className="mt-auto text-white">
                   <h2 className="card-title text-4xl font-semibold">
                     {item.name}
@@ -49,6 +56,20 @@ const Services = () => {
             </div>
           </Link>
         ))}
+      </motion.div>
+      <motion.div
+        variants={fadeIn("up", "tween", 0.2, 1)}
+        className="container"
+      >
+        <div className="text-center w-full">
+          <Link
+            className=" mt-8 btn bg-base-100 rounded-full"
+            type="button"
+            href="/poradenstvi/sluzby"
+          >
+            Dozvědět se více
+          </Link>
+        </div>
       </motion.div>
     </motion.div>
   );
