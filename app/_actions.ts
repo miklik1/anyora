@@ -2,8 +2,9 @@
 
 import { z } from "zod";
 import { Resend } from "resend";
-import { ContactFormSchema, FormDataSchema } from "@/lib/schema";
+import { ContactFormSchema, FormDataSchema, NewsletterFormSchema } from "@/lib/schema";
 import ContactFormEmail from "@/emails/contact-form-email";
+import { NewsletterFormInputs } from "@/components/forms/form-newsletter";
 
 type Inputs = z.infer<typeof FormDataSchema>;
 
@@ -22,18 +23,40 @@ export async function addEntry(data: Inputs) {
 type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendEmail(data: ContactFormInputs) {
+export async function sendEmail(data: ContactFormInputs, service: string) {
   const result = ContactFormSchema.safeParse(data);
 
   if (result.success) {
     const { name, email, message } = result.data;
     try {
       const data = await resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: "delivered@resend.dev",
-        subject: "Hello World",
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        from: "aneta@anyora.cz",
+        to: "aneta@anyora.cz",
+        subject: `Zájem o ${service}`,
+        text: `Jméno: ${name}\nE/mail: ${email}\nZpráva: ${message}`,
         react: ContactFormEmail({ name, email, message }),
+      });
+      return { success: true, data };
+    } catch (error) {
+      return { success: false, error };
+    }
+  }
+
+  if (result.error) {
+    return { success: false, error: result.error.format() };
+  }
+}
+
+export async function addContact(data: NewsletterFormInputs) {
+  const result = NewsletterFormSchema.safeParse(data);
+
+  if (result.success) {
+    const { email } = result.data;
+    try {
+      const data = await resend.contacts.create({
+        email: `${email}`,
+        unsubscribed: false,
+        audienceId: "25d8d3c4-721a-49cb-8471-e7d2de4b847b",
       });
       return { success: true, data };
     } catch (error) {

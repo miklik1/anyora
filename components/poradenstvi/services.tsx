@@ -63,7 +63,7 @@ const Services = () => {
       >
         <div className="text-center w-full">
           <Link
-            className=" mt-8 btn bg-base-100 rounded-full"
+            className=" mt-8 btn bg-base-100 hover:bg-secondary hover:border-primary hover:text-white rounded-full"
             type="button"
             href="/poradenstvi/sluzby"
           >

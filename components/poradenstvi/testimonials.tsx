@@ -65,26 +65,19 @@ const Testimonial = () => {
             disableOnInteraction: true,
           }}
           modules={[Navigation, Autoplay, Pagination, Mousewheel, Keyboard]}
-          className="container mx-4 h-96 rounded-xl max-sm:max-w-sm"
+          className="container mx-4 rounded-xl max-sm:max-w-xs"
         >
           {testimonials.map((item, index) => (
-            <SwiperSlide className="h-full bg-secondary/50" key={index}>
-              <div className="flex h-full items-center justify-center">
-                <figure className="mx-10 mt-10">
-                  <blockquote className="text-center  font-semibold leading-5 text-base-content lg:text-2xl">
+            <SwiperSlide className="w-12 h-full bg-secondary text-white" key={index}>
+              <div className="flex h-full items-center justify-center py-12">
+                <figure className="mx-10">
+                  <blockquote className="text-center font-semibold leading-5 lg:text-xl">
                     <p>“{item.quote}”</p>
                   </blockquote>
                   <div className="mt-10 flex flex-col items-center">
-                    <Image
-                      width={100}
-                      height={100}
-                      className="mx-auto h-14 w-14 rounded-full"
-                      src={item.image}
-                      alt={item.name}
-                    />
                     <div className="mt-4 flex justify-center gap-2 lg:tracking-widest">
                       <div>{item.name}</div>
-                      <div className="text-base-content/50">
+                      <div className="text-white/50">
                         {item.position}
                       </div>
                     </div>

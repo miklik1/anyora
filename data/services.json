@@ -26,6 +26,9 @@
       ],
       "price": "499",
       "package_bullets": ["Analýza nutričního stavu"]
+    },
+    "form": {
+      "title": "Title"
     }
   },
   {

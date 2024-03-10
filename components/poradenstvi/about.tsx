@@ -104,8 +104,8 @@ export default function About() {
         className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3"
       >
         {values.map((item, index) => (
-          <div key={index} className="card w-80 bg-secondary text-slate-100 shadow lg:w-96">
-            <figure className="px-4 pt-4">
+          <div key={index} className="card w-80 text-primary shadow-xl border-2 lg:w-96">
+            {/* <figure className="px-4 pt-4">
               <Image
                 src="icons/empathy.svg"
                 width={50}
@@ -113,8 +113,8 @@ export default function About() {
                 alt="Shoes"
                 className="h-32 w-32"
               />
-            </figure>
-            <div className="card-body items-center text-center pt-0 p-4">
+            </figure> */}
+            <div className="card-body items-center text-center pt-4 p-4">
               <h2 className="card-title ">{item.name}</h2>
               <p className="">{item.description}</p>
             </div>

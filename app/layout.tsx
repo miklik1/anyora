@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className="scroll-p-44 scroll-smooth focus:scroll-auto">
+    <html lang="cs" className="scroll-p-44">
       <body className={poppins.className}>
         <NavbarMain />
         <Providers>{children}</Providers>

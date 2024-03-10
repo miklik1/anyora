@@ -94,7 +94,7 @@ export default function ContactForm() {
 
               <div className="-mx-1.5 mt-4 flex ">
                 <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:text-white"
+                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
                   href="https://www.twitter.com"
                   aria-label="twitter"
                 >
@@ -109,7 +109,7 @@ export default function ContactForm() {
                 </a>
 
                 <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:text-white"
+                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
                   href="https://www.linkedin.com"
                   aria-label="linkedin"
                 >
@@ -135,7 +135,7 @@ export default function ContactForm() {
                 </a>
 
                 <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:text-white"
+                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
                   href="https://www.facebook.com"
                   aria-label="facebook"
                 >
@@ -153,7 +153,7 @@ export default function ContactForm() {
                 </a>
 
                 <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:text-white"
+                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
                   href="https://www.instagram.com"
                   aria-label="instagram"
                 >
@@ -238,7 +238,7 @@ export default function ContactForm() {
 
                 <button
                   disabled={isSubmitting}
-                  className="btn bg-base-100 mt-6 w-full transform px-6 py-3 text-sm font-medium duration-300 hover:bg-secondary hover:text-white"
+                  className="btn bg-base-100 mt-6 w-full transform px-6 py-3 text-sm font-medium duration-300 hover:bg-secondary hover:border-primary hover:text-white "
                 >
                   {isSubmitting ? "Odesílám..." : "Odeslat"}
                 </button>

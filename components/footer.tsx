@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import NewsletterForm from "./forms/form-newsletter";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-secondary text-white">
+    <footer className="footer p-4 md:p-10 bg-secondary text-white">
       <nav>
         <h6 className="footer-title">Služby</h6>
         <Link
@@ -38,7 +39,7 @@ const Footer = () => {
         <h6 className="footer-title">Sociální sítě</h6>
         <div className="-mx-1.5 flex text-black">
           <Link
-            className="rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:text-white"
+            className="rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
             href="https://www.twitter.com"
             aria-label="twitter"
           >
@@ -53,7 +54,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="mx-1.5 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:text-white"
+            className="mx-1.5 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
             href="https://www.facebook.com"
             aria-label="facebook"
           >
@@ -71,7 +72,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="mx-1.5 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:text-white"
+            className="mx-1.5 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
             href="https://www.instagram.com"
             aria-label="instagram"
           >
@@ -89,22 +90,7 @@ const Footer = () => {
           </Link>
         </div>
       </nav>
-      {/* <form>
-        <h6 className="footer-title">Newsletter</h6>
-        <fieldset className="form-control w-80">
-          <label className="label">
-            <span className="label-text">Enter your email address</span>
-          </label>
-          <div className="join">
-            <input
-              type="text"
-              placeholder="username@site.com"
-              className="input input-bordered join-item"
-            />
-            <button className="btn btn-primary join-item">Subscribe</button>
-          </div>
-        </fieldset>
-      </form> */}
+      <NewsletterForm />
     </footer>
   );
 };

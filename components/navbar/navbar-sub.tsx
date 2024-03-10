@@ -6,8 +6,8 @@ import Link from "next/link";
 const navigation = [
   { name: "Domů", href: "#domu" },
   { name: "Služby", href: "#sluzby" },
-  { name: "Reference", href: "#reference" },
   { name: "O Mně", href: "#omne" },
+  { name: "Reference", href: "#reference" },
   { name: "Kontakt", href: "#kontakt" },
 ];
 const NavbarSub = () => {

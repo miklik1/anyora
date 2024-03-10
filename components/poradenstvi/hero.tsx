@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import heroImg from "/public/hero.jpg";
+import NewsletterForm from "../forms/form-newsletter";
 
 const Hero = () => {
   return (
@@ -23,7 +24,7 @@ const Hero = () => {
           alt="Picture of the author"
           className="max-w-xs rounded-b-box rounded-t-[14rem] shadow-2xl outline outline-base-content/5 md:max-w-md"
         />
-        <div className="text-center lg:text-start md:mr-16">
+        <div className="text-center lg:text-start lg:mr-16">
           <span className="badge badge-outline badge-lg mb-2">
             Nutriční poradenství
           </span>
@@ -41,12 +42,7 @@ const Hero = () => {
             osvědčené metody a lidský přístup.
           </p>
           <div className="flex gap-2 max-lg:justify-center">
-            <a
-              href="#kontakt"
-              className="btn bg-base-100 md:btn-lg rounded-full shadow"
-            >
-              Začít
-            </a>
+            <NewsletterForm />
           </div>
         </div>
       </motion.div>
