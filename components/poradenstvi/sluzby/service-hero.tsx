@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import jsonData from "@/data/services.json";
 import { useRouter, useParams } from "next/navigation";
+import backIco from "/public/icons/back.svg";
 
 export function ServiceHero() {
   const params = useParams<{ handle: string }>();
@@ -53,10 +54,11 @@ export function ServiceHero() {
       </motion.div>
       <div className="container flex justify-start px-4">
         <button
-          className=" mt-8 btn outline-0 bg-transparent"
+          className="mt-8 btn border-primary bg-transparent"
           type="button"
           onClick={() => router.push("/poradenstvi")}
         >
+          <Image src={backIco} alt="Back icon" className="w-5"/>
           Zpět
         </button>
       </div>

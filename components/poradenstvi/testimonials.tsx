@@ -39,7 +39,7 @@ const Testimonial = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="reference"
-      className="my-10 flex flex-col items-center justify-center md:my-32"
+      className="mt-10 flex flex-col items-center justify-center md:mt-32"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}

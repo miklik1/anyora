@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import ContactFormMain from "../forms/form-contact-main";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -57,73 +58,15 @@ const Contact = () => {
             <div className="mt-6 w-80 md:mt-8">
               <h3 className="text-base-400 ">Sledujte mě:</h3>
 
-              <div className="-mx-1.5 mt-4 flex ">
-                <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
-                  href="https://www.twitter.com"
-                  aria-label="twitter"
-                >
-                  <svg
-                    className="h-10 w-10 fill-current"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M18.6668 6.67334C18.0002 7.00001 17.3468 7.13268 16.6668 7.33334C15.9195 6.49001 14.8115 6.44334 13.7468 6.84201C12.6822 7.24068 11.9848 8.21534 12.0002 9.33334V10C9.83683 10.0553 7.91016 9.07001 6.66683 7.33334C6.66683 7.33334 3.87883 12.2887 9.3335 14.6667C8.0855 15.498 6.84083 16.0587 5.3335 16C7.53883 17.202 9.94216 17.6153 12.0228 17.0113C14.4095 16.318 16.3708 14.5293 17.1235 11.85C17.348 11.0351 17.4595 10.1932 17.4548 9.34801C17.4535 9.18201 18.4615 7.50001 18.6668 6.67268V6.67334Z" />
-                  </svg>
-                </a>
-
-                <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
-                  href="https://www.linkedin.com"
-                  aria-label="linkedin"
-                >
-                  <svg
-                    className="h-8 w-8"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.2 8.80005C16.4731 8.80005 17.694 9.30576 18.5941 10.2059C19.4943 11.1061 20 12.327 20 13.6V19.2H16.8V13.6C16.8 13.1757 16.6315 12.7687 16.3314 12.4687C16.0313 12.1686 15.6244 12 15.2 12C14.7757 12 14.3687 12.1686 14.0687 12.4687C13.7686 12.7687 13.6 13.1757 13.6 13.6V19.2H10.4V13.6C10.4 12.327 10.9057 11.1061 11.8059 10.2059C12.7061 9.30576 13.927 8.80005 15.2 8.80005Z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M7.2 9.6001H4V19.2001H7.2V9.6001Z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M5.6 7.2C6.48366 7.2 7.2 6.48366 7.2 5.6C7.2 4.71634 6.48366 4 5.6 4C4.71634 4 4 4.71634 4 5.6C4 6.48366 4.71634 7.2 5.6 7.2Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
-                  href="https://www.facebook.com"
-                  aria-label="facebook"
-                >
-                  <svg
-                    className="h-8 w-8"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 10.2222V13.7778H9.66667V20H13.2222V13.7778H15.8889L16.7778 10.2222H13.2222V8.44444C13.2222 8.2087 13.3159 7.9826 13.4826 7.81591C13.6493 7.64921 13.8754 7.55556 14.1111 7.55556H16.7778V4H14.1111C12.9324 4 11.8019 4.46825 10.9684 5.30175C10.1349 6.13524 9.66667 7.2657 9.66667 8.44444V10.2222H7Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  className="btn mx-1.5 rounded-full bg-base-100 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
-                  href="https://www.instagram.com"
+              <div className="flex text-black mt-4">
+                <Link
+                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  href="https://www.instagram.com/_tady_any_/"
                   aria-label="instagram"
+                  target="_blank"
                 >
                   <svg
-                    className="h-8 w-8"
+                    className="h-10 w-10"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +76,56 @@ const Contact = () => {
                       fill="currentColor"
                     />
                   </svg>
-                </a>
+                </Link>
+                <Link
+                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  href="https://www.tiktok.com/@tady_any"
+                  aria-label="tiktok"
+                  target="_blank"
+                >
+                  <svg
+                    className="h-10 w-10 fill-current p-1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M22.465,9.866c-2.139,0-4.122-0.684-5.74-1.846v8.385c0,4.188-3.407,7.594-7.594,7.594c-1.618,0-3.119-0.51-4.352-1.376  c-1.958-1.375-3.242-3.649-3.242-6.218c0-4.188,3.407-7.595,7.595-7.595c0.348,0,0.688,0.029,1.023,0.074v0.977v3.235  c-0.324-0.101-0.666-0.16-1.023-0.16c-1.912,0-3.468,1.556-3.468,3.469c0,1.332,0.756,2.489,1.86,3.07  c0.481,0.253,1.028,0.398,1.609,0.398c1.868,0,3.392-1.486,3.462-3.338L12.598,0h4.126c0,0.358,0.035,0.707,0.097,1.047  c0.291,1.572,1.224,2.921,2.517,3.764c0.9,0.587,1.974,0.93,3.126,0.93V9.866z" />
+                  </svg>
+                </Link>
+                <Link
+                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  href="https://www.youtube.com/channel/UCWKYVLvpSQY2XOBaW2RL9lA"
+                  aria-label="youtube"
+                  target="_blank"
+                >
+                  <svg
+                    className="h-10 w-10 fill-current p-1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M23.498,6.186c-0.276-1.039-1.089-1.858-2.122-2.136C19.505,3.546,12,3.546,12,3.546s-7.505,0-9.377,0.504   C1.591,4.328,0.778,5.146,0.502,6.186C0,8.07,0,12,0,12s0,3.93,0.502,5.814c0.276,1.039,1.089,1.858,2.122,2.136   C4.495,20.454,12,20.454,12,20.454s7.505,0,9.377-0.504c1.032-0.278,1.845-1.096,2.122-2.136C24,15.93,24,12,24,12   S24,8.07,23.498,6.186z M9.546,15.569V8.431L15.818,12L9.546,15.569z" />
+                  </svg>
+                </Link>
+
+                <Link
+                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  href="https://www.facebook.com/profile.php?id=100092842802396"
+                  aria-label="facebook"
+                  target="_blank"
+                >
+                  <svg
+                    className="h-10 w-10"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 10.2222V13.7778H9.66667V20H13.2222V13.7778H15.8889L16.7778 10.2222H13.2222V8.44444C13.2222 8.2087 13.3159 7.9826 13.4826 7.81591C13.6493 7.64921 13.8754 7.55556 14.1111 7.55556H16.7778V4H14.1111C12.9324 4 11.8019 4.46825 10.9684 5.30175C10.1349 6.13524 9.66667 7.2657 9.66667 8.44444V10.2222H7Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

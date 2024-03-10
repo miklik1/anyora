@@ -23,6 +23,7 @@ const Hero = () => {
           src={heroImg}
           alt="Picture of the author"
           className="max-w-xs rounded-b-box rounded-t-[14rem] shadow-2xl outline outline-base-content/5 md:max-w-md"
+          priority
         />
         <div className="text-center lg:text-start lg:mr-16">
           <span className="badge badge-outline badge-lg mb-2">
