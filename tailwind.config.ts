@@ -27,6 +27,8 @@ const config: Config = {
 
           "base-100": "#bfc8a2",
 
+          "background-color": "#e6f1ed",
+
           info: "#5abaff",
 
           success: "#00e374",

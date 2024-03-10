@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import NavBarMain from "@/components/NavBarMain";
 import Providers from "./providers";
-import NavBar from "@/components/NavBar";
+import NavbarMain from "@/components/navbar/navbar-main";
+import Footer from "@/components/footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-p-44">
+    <html lang="cs" className="scroll-p-44 scroll-smooth focus:scroll-auto">
       <body className={poppins.className}>
-          <NavBarMain />
-          <NavBar />
-          <Providers>{children}</Providers>
+        <NavbarMain />
+        <Providers>{children}</Providers>
+        <Footer />
       </body>
     </html>
   );

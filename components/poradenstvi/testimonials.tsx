@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -37,7 +37,7 @@ const Testimonial = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      id="testimonial"
+      id="reference"
       className="my-20 flex flex-col items-center justify-center md:my-32"
     >
       <motion.div

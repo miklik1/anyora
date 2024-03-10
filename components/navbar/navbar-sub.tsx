@@ -4,18 +4,18 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Domů", href: "#home" },
-  { name: "Služby", href: "#services" },
-  { name: "Reference", href: "#testimonial" },
-  { name: "O Mně", href: "#team" },
-  { name: "Kontakty", href: "#contactus" },
+  { name: "Domů", href: "#domu" },
+  { name: "Služby", href: "#sluzby" },
+  { name: "Reference", href: "#reference" },
+  { name: "O Mně", href: "#omne" },
+  { name: "Kontakt", href: "#kontakt" },
 ];
-const NavBar = () => {
+const NavbarSub = () => {
   const [active, setActive] = useState("Domů");
 
   return (
-    <div className="fixed top-16 left-0 right-0 mx-auto z-50 flex justify-center py-4">
-      <div className="flex max-w-xs rounded-full bg-secondary py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-4xl">
+    <div className="sticky top-20 z-50 flex justify-center py-2">
+      <div className="flex max-w-xs rounded-full glass py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-4xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -43,7 +43,7 @@ const NavBar = () => {
                 <li key={index}>
                   <Link
                     key={item.name}
-                    href={`/poradenstvi/${item.href}`}
+                    href={`poradenstvi/${item.href}`}
                     className=""
                   >
                     {item.name}
@@ -58,9 +58,9 @@ const NavBar = () => {
             <nav key={index} className="menu menu-horizontal px-1">
               <a
                 key={item.name}
-                href={`/poradenstvi/${item.href}`}
+                href={`${item.href}`}
                 className={`btn btn-ghost rounded-full  text-sm font-light ${
-                  active === item.name ? "bg-base-300" : ""
+                  active === item.name ? "bg-base-100" : ""
                 }`}
                 onClick={() => setActive(item.name)}
               >
@@ -78,4 +78,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavbarSub;

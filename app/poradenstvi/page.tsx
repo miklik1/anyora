@@ -1,19 +1,21 @@
 "use client";
 
-import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
-import Testimonial from "@/components/Testimonial";
+import NavbarSub from "@/components/navbar/navbar-sub";
+import About from "@/components/poradenstvi/about";
+import Contact from "@/components/poradenstvi/contact";
+import Hero from "@/components/poradenstvi/hero";
+import Services from "@/components/poradenstvi/services";
+import Testimonial from "@/components/poradenstvi/testimonials";
 
 export default function Home() {
   return (
     <>
       <main>
-        <Hero />
+        <NavbarSub />
+        <Hero/>
         <Services />
-        <Testimonial />
         <About />
+        <Testimonial />
         <Contact />
       </main>
     </>

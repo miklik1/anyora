@@ -4,20 +4,18 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Domů", href: "#home" },
-  { name: "Služby", href: "#services" },
-  { name: "Reference", href: "#testimonial" },
-  { name: "O Mně", href: "#team" },
-  { name: "Kontakty", href: "#contactus" },
+  { name: "Domů", href: "#domu" },
+  { name: "Služby", href: "#sluzby" },
+  { name: "Reference", href: "#reference" },
+  { name: "O Mně", href: "#omne" },
+  { name: "Kontakty", href: "#kontakty" },
 ];
-const NavBar = () => {
+const NavbarSubMini = () => {
   const [active, setActive] = useState("Domů");
 
   return (
-    <div
-      className="sticky top-16 z-50 flex justify-center py-4"
-    >
-      <div className="flex max-w-xs rounded-full glass py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-4xl">
+    <div className="fixed top-8 left-0 right-0 mx-auto z-50 flex justify-center py-4">
+      <div className="flex max-w-xs rounded-full bg-white py-0 shadow-2xl  backdrop-blur md:max-w-4xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -61,7 +59,7 @@ const NavBar = () => {
               <a
                 key={item.name}
                 href={`/poradenstvi/${item.href}`}
-                className={`btn btn-ghost rounded-full  text-sm font-light ${
+                className={`rounded-full  mx-2 text-sm font-light px-2 ${
                   active === item.name ? "bg-base-100" : ""
                 }`}
                 onClick={() => setActive(item.name)}
@@ -80,4 +78,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavbarSubMini;

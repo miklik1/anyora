@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 import Image from "next/image";
 
 const values = [
@@ -36,14 +36,14 @@ const values = [
   },
 ];
 
-export default function About ()  {
+export default function About() {
   return (
     <motion.div
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      id="team"
+      id="omne"
       className="flex flex-col items-center justify-center"
     >
       <motion.div
@@ -123,4 +123,4 @@ export default function About ()  {
       </motion.div>
     </motion.div>
   );
-};
+}

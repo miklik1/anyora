@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
-import heroImg from '../public/meme.jpg'
+import { fadeIn, staggerContainer } from "../../utils/motion";
+import heroImg from "/public/meme.jpg";
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      id="home"
+      id="domu"
       className="hero flex justify-center"
     >
       <motion.div

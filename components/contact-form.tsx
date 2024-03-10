@@ -292,9 +292,6 @@ export default function ContactForm() {
           </div>
         </div>
       </motion.div>
-      <div className="flex items-center justify-center py-10  text-sm lg:text-lg">
-        <h1>© 2023 Digital Agency. All rights reserved. </h1>
-      </div>
     </motion.section>
   );
 }

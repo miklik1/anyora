@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 const LogoClouds = () => {
   return (

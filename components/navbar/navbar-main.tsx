@@ -7,7 +7,7 @@ import React from "react";
 const NavBarMain = () => {
   const pathname = usePathname();
   return (
-    <div className="sticky top-0 z-50">
+    <div className="sticky top-0 z-50 shadow-lg">
       <div className="navbar bg-white">
         <div className="flex-1">
           <Link href="/" className="btn btn-ghost text-xl">
