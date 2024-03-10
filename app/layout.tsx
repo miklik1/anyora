@@ -5,6 +5,7 @@ import Providers from "./providers";
 import NavbarMain from "@/components/navbar/navbar-main";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Providers>{children}</Providers>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
