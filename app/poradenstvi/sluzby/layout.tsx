@@ -16,7 +16,7 @@ export default function Page({
   return (
     <>
       <NavbarSubMini />
-      <ServiceHero services={jsonData} />
+      <ServiceHero  />
       {children}
     </>
   );
