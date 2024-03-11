@@ -21,21 +21,21 @@ const config: Config = {
     themes: [
       {
         mytheme: {
-          primary: "#162114",
+          primary: "rgb(22, 33, 20)",
 
-          secondary: "#294122",
+          secondary: "rgb(41, 65, 34)",
 
-          accent: "#162114",
+          accent: "rgb(22, 33, 20)",
 
-          neutral: "#162114",
+          neutral: "rgb(22, 33, 20)",
 
-          "base-100": "#e09132",
+          "base-100": "rgb(224, 145, 50)",
 
-          "background-color": "#e6f1ed",
+          "background-color": "rgb(230, 241, 237)",
 
-          info: "#ffbba6",
+          info: "rgb(255, 187, 166)",
 
-          success: "#162114",
+          success: "rgb(22, 33, 20)",
 
           warning: "#ffa700",
 
