@@ -52,7 +52,7 @@ const NavbarSubMini = () => {
                 <li key={index}>
                   <Link
                     key={item.name}
-                    href={`/poradenstvi/${item.href}`}
+                    href={`/poradenstvi/#${item.href}`}
                     className=""
                   >
                     {item.name}
@@ -65,7 +65,7 @@ const NavbarSubMini = () => {
         <div className="navbar-center mx-10 hidden lg:flex">
           {navigation.map((item, index) => (
             <nav key={index} className="menu menu-horizontal px-1">
-              <a
+              <Link
                 key={item.name}
                 href={`/poradenstvi/#${item.href}`}
                 className={`rounded-full  mx-2 text-sm font-light px-2 ${
@@ -74,14 +74,10 @@ const NavbarSubMini = () => {
                 onClick={() => setActive(item.name)}
               >
                 {item.name}
-              </a>
+              </Link>
             </nav>
           ))}
         </div>
-
-        {/* <div className="navbar-end h-10 scale-75">
-          <Toggle />
-        </div> */}
       </div>
     </div>
   );

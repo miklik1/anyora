@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 
 const navigation = [
   { name: "Domů", href: "#domu" },
@@ -41,13 +40,13 @@ const NavbarSub = () => {
             <ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
               {navigation.map((item, index) => (
                 <li key={index}>
-                  <Link
+                  <a
                     key={item.name}
-                    href={`poradenstvi/${item.href}`}
+                    href={`${item.href}`}
                     className=""
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -69,10 +68,6 @@ const NavbarSub = () => {
             </nav>
           ))}
         </div>
-
-        {/* <div className="navbar-end h-10 scale-75">
-          <Toggle />
-        </div> */}
       </div>
     </div>
   );
