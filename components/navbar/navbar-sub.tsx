@@ -1,26 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 const navigation = [
-  { name: "Domů", href: "domu" },
-  { name: "Služby", href: "sluzby" },
-  { name: "O Mně", href: "omne" },
-  { name: "Reference", href: "reference" },
-  { name: "Kontakt", href: "kontakt" },
+  { name: "Domů", href: "#domu" },
+  { name: "Služby", href: "#sluzby" },
+  { name: "O Mně", href: "#omne" },
+  { name: "Reference", href: "#reference" },
+  { name: "Kontakt", href: "#kontakt" },
 ];
 const NavbarSub = () => {
   const [active, setActive] = useState("Domů");
-
-  const handleNavigation = (item: { name: React.SetStateAction<string>; href: string; }) => {
-    setActive(item.name);
-
-    // Use smooth scrolling if desired
-    const target = document.getElementById(item.href); // Remove leading hash
-    if (target) {
-      target.scrollIntoView();
-    }
-  };
 
   return (
     <div className="sticky top-20 z-50 flex justify-start lg:justify-center px-3 lg:py-2">
@@ -50,14 +41,9 @@ const NavbarSub = () => {
             <ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
               {navigation.map((item, index) => (
                 <li key={index}>
-                  <a
-                    key={item.name}
-                    href={`javascript:void(0);`} // Prevent default anchor behavior
-                    onClick={() => handleNavigation(item)}
-                    className=""
-                  >
+                  <Link href={item.href} className="">
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -66,16 +52,15 @@ const NavbarSub = () => {
         <div className="navbar-center mx-10 hidden lg:flex">
           {navigation.map((item, index) => (
             <nav key={index} className="menu menu-horizontal px-1">
-              <a
-                key={item.name}
-                href={`javascript:void(0);`} // Prevent default anchor behavior
-                onClick={() => { handleNavigation(item); setActive(item.name)}}
+              <Link
+                href={item.href}
                 className={`btn btn-ghost rounded-full  text-sm font-light ${
                   active === item.name ? "bg-base-100" : ""
                 }`}
+                onClick={() => setActive(item.name)}
               >
                 {item.name}
-              </a>
+              </Link>
             </nav>
           ))}
         </div>
