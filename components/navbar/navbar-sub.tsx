@@ -3,14 +3,24 @@
 import React, { useState } from "react";
 
 const navigation = [
-  { name: "Domů", href: "#domu" },
-  { name: "Služby", href: "#sluzby" },
-  { name: "O Mně", href: "#omne" },
-  { name: "Reference", href: "#reference" },
-  { name: "Kontakt", href: "#kontakt" },
+  { name: "Domů", href: "domu" },
+  { name: "Služby", href: "sluzby" },
+  { name: "O Mně", href: "omne" },
+  { name: "Reference", href: "reference" },
+  { name: "Kontakt", href: "kontakt" },
 ];
 const NavbarSub = () => {
   const [active, setActive] = useState("Domů");
+
+  const handleNavigation = (item: { name: React.SetStateAction<string>; href: string; }) => {
+    setActive(item.name);
+
+    // Use smooth scrolling if desired
+    const target = document.getElementById(item.href); // Remove leading hash
+    if (target) {
+      target.scrollIntoView();
+    }
+  };
 
   return (
     <div className="sticky top-20 z-50 flex justify-start lg:justify-center px-3 lg:py-2">
@@ -42,7 +52,8 @@ const NavbarSub = () => {
                 <li key={index}>
                   <a
                     key={item.name}
-                    href={`${item.href}`}
+                    href={`javascript:void(0);`} // Prevent default anchor behavior
+                    onClick={() => handleNavigation(item)}
                     className=""
                   >
                     {item.name}
@@ -57,11 +68,11 @@ const NavbarSub = () => {
             <nav key={index} className="menu menu-horizontal px-1">
               <a
                 key={item.name}
-                href={`${item.href}`}
+                href={`javascript:void(0);`} // Prevent default anchor behavior
+                onClick={() => { handleNavigation(item); setActive(item.name)}}
                 className={`btn btn-ghost rounded-full  text-sm font-light ${
                   active === item.name ? "bg-base-100" : ""
                 }`}
-                onClick={() => setActive(item.name)}
               >
                 {item.name}
               </a>
