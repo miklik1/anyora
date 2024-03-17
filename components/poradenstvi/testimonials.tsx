@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 import {
   Navigation,
   Autoplay,
@@ -12,7 +12,7 @@ import {
   Mousewheel,
   Keyboard,
 } from "swiper/modules";
-import Image from "next/image";
+
 const testimonials = [
   {
     name: "Nikola",
@@ -45,15 +45,18 @@ const Testimonial = () => {
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-3xl font-semibold md:text-5xl">
-          Reference
+        <h1 className="text-center text-3xl font-bold md:text-5xl">
+          REFERENCE
         </h1>
         <span className="text-md mt-2 px-2  md:mt-4 md:px-5 md:text-xl">
           Co o mně říkají klienti
         </span>
       </motion.div>
 
-      <motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="px-10 py-10">
+      <motion.div
+        variants={fadeIn("up", "tween", 0.2, 1)}
+        className="SliderWrapper px-10 py-10"
+      >
         <Swiper
           cssMode={true}
           navigation={true}
@@ -68,7 +71,10 @@ const Testimonial = () => {
           className="container mx-4 rounded-xl max-sm:max-w-xs"
         >
           {testimonials.map((item, index) => (
-            <SwiperSlide className="w-12 h-full bg-secondary text-white" key={index}>
+            <SwiperSlide
+              className="w-12 h-full bg-hunter-green-500 text-white"
+              key={index}
+            >
               <div className="flex h-full items-center justify-center py-12">
                 <figure className="mx-10">
                   <blockquote className="text-center font-semibold leading-5 lg:text-xl">
@@ -77,9 +83,7 @@ const Testimonial = () => {
                   <div className="mt-10 flex flex-col items-center">
                     <div className="mt-4 flex justify-center gap-2 lg:tracking-widest">
                       <div>{item.name}</div>
-                      <div className="text-white/50">
-                        {item.position}
-                      </div>
+                      <div className="text-white/50">{item.position}</div>
                     </div>
                   </div>
                 </figure>

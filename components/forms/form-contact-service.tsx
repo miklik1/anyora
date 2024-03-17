@@ -117,7 +117,7 @@ export default function ContactFormService({ service }: any) {
 
               <button
                 disabled={isSubmitting}
-                className="btn bg-base-100 mt-6 w-full transform px-6 py-3 text-sm font-medium duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                className="btn bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 mt-6 w-full transform px-6 py-3 text-sm font-medium"
               >
                 {isSubmitting ? "Odesílám..." : "Odeslat"}
               </button>

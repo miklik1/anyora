@@ -4,7 +4,7 @@ import NewsletterForm from "./forms/form-newsletter";
 
 const Footer = () => {
   return (
-    <footer className="footer p-4 md:p-10 bg-secondary text-white">
+    <footer className="footer p-4 md:p-10 bg-hunter-green-500 text-white">
       <nav>
         <h6 className="footer-title">Služby</h6>
         <Link
@@ -39,7 +39,7 @@ const Footer = () => {
         <h6 className="footer-title">Sociální sítě</h6>
         <div className="flex text-black">
           <Link
-            className="mr-2 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+            className="mr-2 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 "
             href="https://www.instagram.com/_tady_any_/"
             aria-label="instagram"
             target="_blank"
@@ -57,7 +57,7 @@ const Footer = () => {
             </svg>
           </Link>
           <Link
-            className="mr-2 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+            className="mr-2 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 "
             href="https://www.tiktok.com/@tady_any"
             aria-label="tiktok"
             target="_blank"
@@ -72,7 +72,7 @@ const Footer = () => {
             </svg>
           </Link>
           <Link
-            className="mr-2 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+            className="mr-2 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 "
             href="https://www.youtube.com/channel/UCWKYVLvpSQY2XOBaW2RL9lA"
             aria-label="youtube"
             target="_blank"
@@ -88,7 +88,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="mr-2 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+            className="mr-2 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 "
             href="https://www.facebook.com/profile.php?id=100092842802396"
             aria-label="facebook"
             target="_blank"

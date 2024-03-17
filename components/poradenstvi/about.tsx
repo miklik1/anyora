@@ -50,8 +50,8 @@ export default function About() {
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-3xl font-semibold md:text-5xl">
-          O mně
+        <h1 className="text-center text-3xl md:text-5xl font-bold">
+          O MNĚ
         </h1>
       </motion.div>
       <motion.div

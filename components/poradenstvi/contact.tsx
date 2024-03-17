@@ -19,8 +19,8 @@ const Contact = () => {
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex w-full flex-col justify-center"
       >
-        <h1 className="text-center text-3xl font-semibold md:text-5xl">
-          Kontaktujte mě
+        <h1 className="text-center text-3xl font-bold md:text-5xl">
+          KONTAKTUJTE MĚ
         </h1>
         <span className="text-md mt-2 px-2 text-center  md:mt-4 md:px-5 md:text-xl">
           Contact us now and scale your business
@@ -49,7 +49,7 @@ const Contact = () => {
                   />
                 </svg>
 
-                <span className="mx-2 w-72 truncate  text-base-content">
+                <span className="mx-2 w-72 truncate">
                   tady.aneta@gmail.com
                 </span>
               </p>
@@ -60,7 +60,7 @@ const Contact = () => {
 
               <div className="flex text-black mt-4">
                 <Link
-                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  className="mr-4 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 "
                   href="https://www.instagram.com/_tady_any_/"
                   aria-label="instagram"
                   target="_blank"
@@ -78,7 +78,7 @@ const Contact = () => {
                   </svg>
                 </Link>
                 <Link
-                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  className="mr-4 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 "
                   href="https://www.tiktok.com/@tady_any"
                   aria-label="tiktok"
                   target="_blank"
@@ -93,7 +93,7 @@ const Contact = () => {
                   </svg>
                 </Link>
                 <Link
-                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  className="mr-4 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 "
                   href="https://www.youtube.com/channel/UCWKYVLvpSQY2XOBaW2RL9lA"
                   aria-label="youtube"
                   target="_blank"
@@ -109,7 +109,7 @@ const Contact = () => {
                 </Link>
 
                 <Link
-                  className="mr-4 rounded-full bg-base-100 p-1 duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+                  className="mr-4 rounded-full bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300"
                   href="https://www.facebook.com/profile.php?id=100092842802396"
                   aria-label="facebook"
                   target="_blank"

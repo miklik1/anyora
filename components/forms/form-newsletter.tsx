@@ -38,24 +38,24 @@ export default function NewsletterForm() {
   return (
     <form onSubmit={handleSubmit(processForm)}>
       <h6 className="footer-title">Newsletter</h6>
-      <fieldset className="form-control w-42 ">
+      <fieldset className="form-control lg:w-42">
         <div className="join">
           <input
             type="text"
             placeholder="abcd@email.cz"
-            className="input input-bordered join-item bg-white text-primary"
+            className="input input-bordered join-item bg-neutral-50 text-hunter-green-900"
             {...register("email")}
           />
           <button
             disabled={isSubmitting}
-            className="btn bg-base-100 hover:bg-primary hover:text-white hover:border-primary join-item"
+            className="btn bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none join-item"
           >
             Přihlásit se
           </button>
         </div>
         <label className="label">
           {errors.email?.message && (
-            <p className="ml-1 mt-1 text-sm text-white">
+            <p className="ml-1 mt-1 text-sm text-red-900">
               {errors.email.message}
             </p>
           )}

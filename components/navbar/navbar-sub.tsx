@@ -14,8 +14,8 @@ const NavbarSub = () => {
   const [active, setActive] = useState("Domů");
 
   return (
-    <div className="sticky top-20 z-50 flex justify-start lg:justify-center px-3 lg:py-2">
-      <div className="flex max-w-xs rounded-full glass py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-4xl">
+    <div className="sticky top-20 z-50 flex justify-center lg:justify-center px-3 lg:py-2">
+      <div className="flex max-w-xs rounded-full glass py-0 shadow-2xl border-2 backdrop-blur md:max-w-4xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -38,15 +38,20 @@ const NavbarSub = () => {
                 />
               </svg>
             </div>
-            <ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
+            <nav className="flex flex-col menu dropdown-content menu-md z-[20] mt-3 w-52 gap-2 rounded-box p-2 shadow bg-neutral-50">
               {navigation.map((item, index) => (
-                <li key={index}>
-                  <Link href={item.href} className="">
-                    {item.name}
-                  </Link>
-                </li>
+                <Link
+                  key={index}
+                  href={item.href}
+                  className={`text-sm font-light p-2 pl-4  rounded-badge ${
+                    active === item.name ? "bg-yellow-500" : ""
+                  }`}
+                  onClick={() => setActive(item.name)}
+                >
+                  {item.name}
+                </Link>
               ))}
-            </ul>
+            </nav>
           </div>
         </div>
         <div className="navbar-center mx-10 hidden lg:flex">
@@ -55,7 +60,7 @@ const NavbarSub = () => {
               <Link
                 href={item.href}
                 className={`btn btn-ghost rounded-full  text-sm font-light ${
-                  active === item.name ? "bg-base-100" : ""
+                  active === item.name ? "bg-yellow-500" : ""
                 }`}
                 onClick={() => setActive(item.name)}
               >

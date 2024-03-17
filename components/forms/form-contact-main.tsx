@@ -38,7 +38,7 @@ export default function ContactFormMain() {
 
   return (
     <div className="card mt-8 lg:mx-6 lg:w-1/2">
-      <div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl outline outline-base-content/5 lg:max-w-xl">
+      <div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl border-2 lg:max-w-xl">
         <h1 className="card-title">Na co se chcete zeptat?</h1>
         <form onSubmit={handleSubmit(processForm)} className="mt-6">
           <div className="flex-1">
@@ -101,7 +101,7 @@ export default function ContactFormMain() {
 
           <button
             disabled={isSubmitting}
-            className="btn bg-base-100 mt-6 w-full transform px-6 py-3 text-sm font-medium duration-300 hover:bg-secondary hover:border-primary hover:text-white "
+            className="btn bg-yellow-500 hover:bg-yellow-600 text-hunter-green-950 hover:text-white border-none p-1 duration-300 mt-6 w-full transform px-6 py-3 text-sm font-medium"
           >
             {isSubmitting ? "Odesílám..." : "Odeslat"}
           </button>
