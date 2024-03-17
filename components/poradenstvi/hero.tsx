@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import heroImg from "/public/hero.jpg";
 import NewsletterForm from "../forms/form-newsletter";
 
-const Hero = () => {
+const Hero = ({ onViewportEnter, ref }) => {
   return (
     <motion.div
       variants={staggerContainer}
@@ -13,7 +13,9 @@ const Hero = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0 }}
       id="domu"
+      onViewportEnter={onViewportEnter}
       className="hero flex justify-center lg:mt-20"
+      ref={ref}
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}

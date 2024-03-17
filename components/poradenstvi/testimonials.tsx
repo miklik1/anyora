@@ -31,14 +31,16 @@ const testimonials = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
 ];
-const Testimonial = () => {
+const Testimonial = ({ ref, onViewportEnter }) => {
   return (
     <motion.div
+      ref={ref}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: false, amount: 0.01 }}
       id="reference"
+      onViewportEnter={onViewportEnter}
       className="mt-10 flex flex-col items-center justify-center md:mt-32"
     >
       <motion.div

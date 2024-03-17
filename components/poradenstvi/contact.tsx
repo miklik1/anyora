@@ -5,14 +5,16 @@ import { fadeIn, staggerContainer } from "../../utils/motion";
 import ContactFormMain from "../forms/form-contact-main";
 import Link from "next/link";
 
-const Contact = () => {
+const Contact = ({ ref, onViewportEnter }) => {
   return (
     <motion.section
+      ref={ref}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="kontakt"
+      onViewportEnter={onViewportEnter}
       className="mt-10 md:mt-20"
     >
       <motion.div
@@ -49,9 +51,7 @@ const Contact = () => {
                   />
                 </svg>
 
-                <span className="mx-2 w-72 truncate">
-                  tady.aneta@gmail.com
-                </span>
+                <span className="mx-2 w-72 truncate">tady.aneta@gmail.com</span>
               </p>
             </div>
 

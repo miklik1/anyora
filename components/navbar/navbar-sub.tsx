@@ -2,15 +2,15 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-
+import { NavLink } from "./navlink-sub";
 const navigation = [
-  { name: "Domů", href: "#domu" },
-  { name: "Služby", href: "#sluzby" },
-  { name: "O Mně", href: "#omne" },
-  { name: "Reference", href: "#reference" },
-  { name: "Kontakt", href: "#kontakt" },
+  { name: "Domů", href: "#domu", sectionId: "domu" },
+  { name: "Služby", href: "#sluzby", sectionId: "sluzby" },
+  { name: "O Mně", href: "#omne", sectionId: "omne" },
+  { name: "Reference", href: "#reference", sectionId: "reference" },
+  { name: "Kontakt", href: "#kontakt", sectionId: "kontakt" },
 ];
-const NavbarSub = () => {
+const NavbarSub = ({ activeSection }) => {
   const [active, setActive] = useState("Domů");
 
   return (
@@ -38,26 +38,10 @@ const NavbarSub = () => {
                 />
               </svg>
             </div>
-            <nav className="flex flex-col menu dropdown-content menu-md z-[20] mt-3 w-52 gap-2 rounded-box p-2 shadow bg-neutral-50">
+            <div className="menu  menu-md z-[999] navbar-center mx-10">
               {navigation.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={`text-sm font-light p-2 pl-4  rounded-badge ${
-                    active === item.name ? "bg-yellow-500" : ""
-                  }`}
-                  onClick={() => setActive(item.name)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </div>
-        <div className="navbar-center mx-10 hidden lg:flex">
-          {navigation.map((item, index) => (
-            <nav key={index} className="menu menu-horizontal px-1">
-              <Link
+                <nav key={index} className="menu menu-horizontal px-1">
+                  {/* <Link
                 href={item.href}
                 className={`btn btn-ghost rounded-full  text-sm font-light ${
                   active === item.name ? "bg-yellow-500" : ""
@@ -65,7 +49,60 @@ const NavbarSub = () => {
                 onClick={() => setActive(item.name)}
               >
                 {item.name}
-              </Link>
+              </Link> */}
+                  <NavLink
+                    key={index}
+                    href={item.href}
+                    text={item.name}
+                    sectionId={item.sectionId}
+                    activeSection={activeSection}
+                  />
+                </nav>
+              ))}
+            </div>
+            {/* <nav className="flex flex-col menu dropdown-content menu-md z-[20] mt-3 w-52 gap-2 rounded-box p-2 shadow bg-neutral-50">
+              {navigation.map((item, index) => (
+                // <Link
+                //   key={index}
+                //   href={item.href}
+                //   className={`text-sm font-light p-2 pl-4  rounded-badge ${
+                //     active === item.name ? "bg-yellow-500" : ""
+                //   }`}
+                //   onClick={() => setActive(item.name)}
+                // >
+                //   {item.name}
+                // </Link>
+                <NavLink
+                  key={index}
+                  href={item.href}
+                  text={item.name}
+                  sectionId={item.sectionId}
+                  activeSection={activeSection}
+                />
+                //   href={item.href}
+              ))}
+            </nav> */}
+          </div>
+        </div>
+        <div className="navbar-center mx-10 hidden lg:flex">
+          {navigation.map((item, index) => (
+            <nav key={index} className="menu menu-horizontal px-1">
+              {/* <Link
+                href={item.href}
+                className={`btn btn-ghost rounded-full  text-sm font-light ${
+                  active === item.name ? "bg-yellow-500" : ""
+                }`}
+                onClick={() => setActive(item.name)}
+              >
+                {item.name}
+              </Link> */}
+              <NavLink
+                key={index}
+                href={item.href}
+                text={item.name}
+                sectionId={item.sectionId}
+                activeSection={activeSection}
+              />
             </nav>
           ))}
         </div>

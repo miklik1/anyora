@@ -7,14 +7,16 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import services from "@/data/services.json";
 
-const Services = () => {
+const Services = ({ ref, onViewportEnter }) => {
   return (
     <motion.div
+      ref={ref}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="sluzby"
+      onViewportEnter={onViewportEnter}
       className="mt-10 flex flex-col items-center justify-center md:mt-20"
     >
       <motion.div

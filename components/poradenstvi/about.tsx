@@ -36,23 +36,23 @@ const values = [
   },
 ];
 
-export default function About() {
+export default function About({ ref, onViewportEnter }) {
   return (
     <motion.div
+      ref={ref}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
       id="omne"
+      onViewportEnter={onViewportEnter}
       className="flex flex-col items-center justify-center mt-10 lg:mt-20"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-3xl md:text-5xl font-bold">
-          O MNĚ
-        </h1>
+        <h1 className="text-center text-3xl md:text-5xl font-bold">O MNĚ</h1>
       </motion.div>
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
@@ -104,7 +104,10 @@ export default function About() {
         className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3"
       >
         {values.map((item, index) => (
-          <div key={index} className="card w-80 text-primary shadow-xl border-2 lg:w-96">
+          <div
+            key={index}
+            className="card w-80 text-primary shadow-xl border-2 lg:w-96"
+          >
             {/* <figure className="px-4 pt-4">
               <Image
                 src="icons/empathy.svg"
