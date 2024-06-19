@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs" className="">
-      <body className={poppins.className + "bg-color-hunter-green-100 overflow-x-hidden"}>
+      <body className={poppins.className + "bg-color-hunter-green-100"}>
         <NavbarMain />
         <Providers>{children}</Providers>
         <Footer />

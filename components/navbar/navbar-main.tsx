@@ -31,7 +31,7 @@ const NavBarMain = () => {
   }, [pathname]);
 
   return (
-    <div className="drawer z-50 drawer-end">
+    <div className="max-w-full drawer z-50 drawer-end">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         <div className="w-full z-10 flex flex-row justify-center items-center navbar bg-white shadow-md">
@@ -113,7 +113,7 @@ const NavBarMain = () => {
           </div>
         </div>
       </div>
-      <div className="drawer-side z-20">
+      <div className="drawer-side overflow-hidden z-20">
         <label
           htmlFor="my-drawer-3"
           aria-label="close sidebar"
