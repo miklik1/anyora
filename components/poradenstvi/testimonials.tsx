@@ -31,25 +31,26 @@ const testimonials = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
 ];
-const Testimonial = ({ ref, onViewportEnter }) => {
+const Testimonial = () => {
   return (
     <motion.div
-      ref={ref}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.01 }}
+      viewport={{ once: true, amount: "all" }}
       id="reference"
-      onViewportEnter={onViewportEnter}
       className="mt-10 flex flex-col items-center justify-center md:mt-32"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-3xl font-bold md:text-5xl">
+        <motion.h1
+          viewport={{ once: true, amount: "all" }}
+          className="text-center text-3xl font-bold md:text-5xl"
+        >
           REFERENCE
-        </h1>
+        </motion.h1>
         <span className="text-md mt-2 px-2  md:mt-4 md:px-5 md:text-xl">
           Co o mně říkají klienti
         </span>

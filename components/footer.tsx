@@ -4,7 +4,7 @@ import NewsletterForm from "./forms/form-newsletter";
 
 const Footer = () => {
   return (
-    <footer className="footer p-4 md:p-10 bg-hunter-green-500 text-white">
+    <footer className="footer p-4 md:p-10 bg-slate-100 text-black">
       <nav>
         <h6 className="footer-title">Služby</h6>
         <Link

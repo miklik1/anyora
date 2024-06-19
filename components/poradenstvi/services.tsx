@@ -7,23 +7,21 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import services from "@/data/services.json";
 
-const Services = ({ ref, onViewportEnter }) => {
+const Services = () => {
   return (
     <motion.div
-      ref={ref}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.2 }}
       id="sluzby"
-      onViewportEnter={onViewportEnter}
       className="mt-10 flex flex-col items-center justify-center md:mt-20"
     >
       <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
+        variants={fadeIn("up", "tween", 0.2, 0.6)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-3xl font-bold md:text-5xl">
+        <h1 className="text-center text-3xl font-black md:text-5xl">
           MOJE SLUŽBY
         </h1>
         <span className="text-md mt-2 px-2 text-center  md:mt-4 md:px-5 md:text-xl">
@@ -32,7 +30,7 @@ const Services = ({ ref, onViewportEnter }) => {
         </span>
       </motion.div>
       <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
+        variants={fadeIn("up", "tween", 0.4, 0.6)}
         className="container mt-10 grid gap-4 p-4 lg:grid-cols-3 xl:grid-cols-3"
       >
         {services.map((item, index) => (

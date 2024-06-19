@@ -36,23 +36,22 @@ const values = [
   },
 ];
 
-export default function About({ ref, onViewportEnter }) {
+export default function About() {
   return (
     <motion.div
-      ref={ref}
+
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
       id="omne"
-      onViewportEnter={onViewportEnter}
       className="flex flex-col items-center justify-center mt-10 lg:mt-20"
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="text-center text-3xl md:text-5xl font-bold">O MNĚ</h1>
+        <h1 className="text-center text-3xl md:text-5xl font-black">O MNĚ</h1>
       </motion.div>
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
@@ -99,31 +98,7 @@ export default function About({ ref, onViewportEnter }) {
           </div>
         </div>
       </motion.div>
-      <motion.div
-        variants={fadeIn("up", "tween", 0.2, 1)}
-        className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3"
-      >
-        {values.map((item, index) => (
-          <div
-            key={index}
-            className="card w-80 text-primary shadow-xl border-2 lg:w-96"
-          >
-            {/* <figure className="px-4 pt-4">
-              <Image
-                src="icons/empathy.svg"
-                width={50}
-                height={50}
-                alt="Shoes"
-                className="h-32 w-32"
-              />
-            </figure> */}
-            <div className="card-body items-center text-center pt-4 p-4">
-              <h2 className="card-title ">{item.name}</h2>
-              <p className="">{item.description}</p>
-            </div>
-          </div>
-        ))}
-      </motion.div>
+
     </motion.div>
   );
 }

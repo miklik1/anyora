@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ServiceHero } from "@/components/poradenstvi/sluzby/service-hero";
-import NavbarSubMini from "@/components/navbar/navbar-sub-mini";
 
 export const metadata: Metadata = {
   title: "Anyora - Nutriční poradenství",
@@ -15,8 +14,7 @@ export default function Page({
 }>) {
   return (
     <>
-      <NavbarSubMini />
-      <ServiceHero  />
+      <ServiceHero />
       {children}
     </>
   );

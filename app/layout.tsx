@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className="scroll-p-32 xl:scroll-p-44">
+    <html lang="cs" className="">
       <body className={poppins.className + "bg-color-hunter-green-100"}>
         <NavbarMain />
         <Providers>{children}</Providers>
