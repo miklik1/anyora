@@ -23,8 +23,13 @@ const config: Config = {
           "950": "#162114",
         },
       },
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["var(--font-unbounded)"],
+            mono: ["var(--font-roboto-mono)"],
+          },
+        },
       },
     },
   },

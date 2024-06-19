@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="text-center lg:text-start lg:mr-16">
           <motion.span
             variants={fadeIn("up", "tween", 0, 0.6)}
-            className="badge badge-outline badge-lg mb-2"
+            className="badge badge-outline badge-lg mb-2 font-sans"
           >
             Nutriční poradenství
           </motion.span>
