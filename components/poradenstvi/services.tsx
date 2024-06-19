@@ -34,31 +34,29 @@ const Services = () => {
         className="container mt-10 grid gap-4 p-4 lg:grid-cols-3 xl:grid-cols-3"
       >
         {services.map((item, index) => (
-          <>
-            <Link href={`poradenstvi/sluzby/${item.handle}`} key={index}>
-              <div className="card image-full shadow-xl transition duration-300 lg:h-full hover:-translate-y-1 cursor-pointer">
-                <figure className="object-cover">
-                  <Image
-                    width={1152}
-                    height={768}
-                    src={`/services/${item.handle}.jpg`}
-                    alt={item.name}
-                    priority
-                  />
-                </figure>
-                <div className="">
-                  <div className="card-gradient inset-0 w-full h-full p-8 flex flex-col justify-end">
-                    <div className="text-white">
-                      <h2 className="card-title text-4xl font-semibold">
-                        {item.name}
-                      </h2>
-                      <p className="text-hunter-green-200 mt-2">{item.desc}</p>
-                    </div>
+          <Link href={`poradenstvi/sluzby/${item.handle}`} key={index}>
+            <div className="card image-full shadow-xl transition duration-300 lg:h-full hover:-translate-y-1 cursor-pointer">
+              <figure className="object-cover">
+                <Image
+                  width={1152}
+                  height={768}
+                  src={`/services/${item.handle}.jpg`}
+                  alt={item.name}
+                  priority
+                />
+              </figure>
+              <div className="">
+                <div className="card-gradient inset-0 w-full h-full p-8 flex flex-col justify-end">
+                  <div className="text-white">
+                    <h2 className="card-title text-4xl font-semibold">
+                      {item.name}
+                    </h2>
+                    <p className="text-hunter-green-200 mt-2">{item.desc}</p>
                   </div>
                 </div>
               </div>
-            </Link>
-          </>
+            </div>
+          </Link>
         ))}
       </motion.div>
       <motion.div

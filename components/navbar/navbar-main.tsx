@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const navigation_main = [
-  { name: "Nutriční poradenství", href: "/poradenstvi" },
+  { name: "Nutriční poradenství", href: "/" },
   {
     name: "E-Shop",
     href: "https://d66a07-f0.myshopify.com/",
@@ -22,7 +22,7 @@ const navigation_sub = [
 ];
 
 const NavBarMain = () => {
-  const [active, setActive] = useState("Domů");
+  const [active, setActive] = useState("Nutriční poradenství");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -96,9 +96,9 @@ const NavBarMain = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex-row justify-center items-center  navbar bg-slate-100 ">
+        <div className="w-full flex-row justify-center items-center navbar bg-slate-100 hidden lg:flex">
           <div className="container flex-row justify-center items-center">
-            <div className="">
+            <div>
               <ul className="menu menu-horizontal justify-center">
                 <>
                   {active === navigation_main[0].name &&
